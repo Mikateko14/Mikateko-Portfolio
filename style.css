@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bg: #1a1218; 
+    --card-bg: #2d212a;
+    --pink: #ffafcc;
+    --pink-glow: rgba(255, 175, 204, 0.3);
+    --purple-soft: #b388eb;
+    --text: #f8f0fb;
+    --text-dim: #a696a6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+
+body { background-color: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+
+/* NAVIGATION */
+nav {
+    display: flex; justify-content: center; align-items: center;
+    padding: 2rem; position: sticky; top: 0; z-index: 1000;
+}
+
+.nav-pill {
+    display: flex; gap: 2.5rem; background: rgba(45, 33, 42, 0.85);
+    padding: 0.8rem 3rem; border-radius: 50px;
+    backdrop-filter: blur(15px); border: 1px solid rgba(255, 175, 204, 0.2);
+}
+
+.nav-pill a { text-decoration: none; color: var(--text); font-size: 0.9rem; transition: 0.3s; }
+.nav-pill a:hover { color: var(--pink); text-shadow: 0 0 10px var(--pink); }
+
+/* CONTAINERS */
+.container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; min-height: 80vh; }
+.highlight { color: var(--pink); }
+
+/* ABOUT PAGE LAYOUT */
+.about-wrapper { display: flex; align-items: flex-start; justify-content: space-between; gap: 4rem; }
+.about-text { flex: 1; }
+.about-image { flex: 0 0 350px; position: sticky; top: 120px; }
+.profile-frame {
+    width: 350px; height: 450px; padding: 12px;
+    background: linear-gradient(135deg, var(--pink), var(--purple-soft));
+    border-radius: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+.profile-frame img { width: 100%; height: 100%; border-radius: 30px; object-fit: cover; }
+
+/* PROJECT & SKILL CARDS */
+.glass-card { 
+    background: var(--card-bg); padding: 2.5rem; border-radius: 20px; 
+    border: 1px solid rgba(255, 255, 255, 0.05); transition: 0.4s ease; margin-bottom: 2rem;
+}
+.glass-card:hover { border-color: var(--pink); transform: translateY(-8px); box-shadow: 0 15px 35px var(--pink-glow); }
+
+.project-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--pink); margin-bottom: 10px; display: block; }
+.project-info { font-size: 0.9rem; color: var(--text-dim); margin-top: 15px; }
+.project-info strong { color: var(--text); }
+
+/* PROGRESS BARS */
+.skill-item { margin-bottom: 2rem; }
+.progress-bg { height: 10px; background: #3d2d39; border-radius: 10px; overflow: hidden; margin-top: 10px; }
+.progress-fill { height: 100%; background: linear-gradient(to right, var(--purple-soft), var(--pink)); box-shadow: 0 0 15px var(--pink-glow); }
+
+/* BUTTONS */
+.btn-pink {
+    display: inline-block; padding: 1rem 2.5rem; border-radius: 50px;
+    background: var(--pink); color: #2d1b28; text-decoration: none;
+    font-weight: 600; transition: 0.3s; border: none; cursor: pointer;
+}
+.btn-pink:hover { transform: scale(1.05); box-shadow: 0 0 25px var(--pink); background: #fff; }
+
+footer { text-align: center; padding: 4rem; color: var(--text-dim); font-size: 0.9rem; border-top: 1px solid rgba(255, 255, 255, 0.05); }}
